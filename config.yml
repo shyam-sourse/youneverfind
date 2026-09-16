@@ -1,0 +1,41 @@
+# Get a free Groq API key at https://console.groq.com/keys
+# Multiple keys can be comma-separated - they are rotated automatically.
+# Keys live in .env (one per line) - rotated by utils/groq_keys.py
+GROQ_API_KEY: ""
+INTERNET_ACCESS: true 
+MAX_SEARCH_RESULTS: 4 
+ALLOW_DM: true
+SMART_MENTION: true 
+MODEL_ID: llama-3.3-70b-versatile
+MAX_HISTORY: 8 
+PRESENCES_CHANGE_DELAY: 8 
+AI_NSFW_CONTENT_FILTER: true 
+LANGUAGE: en 
+DEFAULT_INSTRUCTION: soniye 
+
+Discord: https://discord.gg/34thSTQ2Sp
+
+TRIGGER:
+  - chatbot
+  - $
+  - soniye 
+
+AUTO_SHARDING: true
+
+DISABLE_PRESENCE: false 
+PRESENCES:
+  - How can I assist you?
+  - Currently in {guild_count} guilds
+  - Support at https://discord.gg/34thSTQ2Sp
+
+
+BLACKLIST_WORDS: #changed to cogs/imagine.py
+  - naked
+  - loli
+  - hentai
+  - explicit
+  - pornography
+  - adult
+  - XXX
+  - sex
+  - erotic

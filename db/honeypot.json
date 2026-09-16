@@ -1,0 +1,12 @@
+{
+    "983389622593802290": {
+        "enabled": true,
+        "channels": [
+            1546306729644662885
+        ],
+        "action": "kick",
+        "reason": "Honeypot triggered \u2014 you sent a message in a trap channel.",
+        "log": null,
+        "whitelist": []
+    }
+}

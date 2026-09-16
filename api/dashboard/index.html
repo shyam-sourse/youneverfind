@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZyroX Dashboard</title>
+<link rel="stylesheet" href="/dashboard/style.css">
+</head>
+<body>
+<div id="login" class="login-screen hidden">
+  <div class="login-card">
+    <div class="login-logo">ZyroX</div>
+    <h1>Bot Dashboard</h1>
+    <p>Enter your Dashboard API Key to continue.</p>
+    <input type="password" id="api-key-input" placeholder="DASHBOARD_API_KEY" autocomplete="off">
+    <button id="login-btn">Login</button>
+    <p id="login-error" class="error-text hidden"></p>
+  </div>
+</div>
+
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <div class="brand">ZyroX <span>Admin Panel</span></div>
+    <nav>
+      <button class="nav-item active" data-view="overview">Overview</button>
+      <button class="nav-item" data-view="servers">Servers</button>
+      <button class="nav-item" data-view="admin">Admin</button>
+      <button class="nav-item" data-view="logs">Logs</button>
+    </nav>
+    <div class="sidebar-footer">
+      <span id="bot-name" class="bot-name">—</span>
+      <button id="logout-btn">Logout</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <!-- Overview -->
+    <section id="view-overview" class="view active">
+      <h2>Overview</h2>
+      <div class="cards">
+        <div class="card"><span class="card-label">Servers</span><span class="card-value" id="stat-servers">—</span></div>
+        <div class="card"><span class="card-label">Users</span><span class="card-value" id="stat-users">—</span></div>
+        <div class="card"><span class="card-label">Ping</span><span class="card-value" id="stat-ping">—</span></div>
+        <div class="card"><span class="card-label">Commands</span><span class="card-value" id="stat-commands">—</span></div>
+        <div class="card"><span class="card-label">Database</span><span class="card-value" id="stat-db">—</span></div>
+        <div class="card"><span class="card-label">Uptime</span><span class="card-value" id="stat-uptime">—</span></div>
+      </div>
+      <h3>System Health</h3>
+      <div id="nodes" class="nodes"></div>
+    </section>
+
+    <!-- Servers -->
+    <section id="view-servers" class="view">
+      <h2>Servers</h2>
+      <div id="guild-list" class="guild-list"></div>
+    </section>
+
+    <!-- Server Detail -->
+    <section id="view-guild" class="view">
+      <button id="back-to-servers" class="btn ghost">← Back to Servers</button>
+      <div id="guild-detail"></div>
+    </section>
+
+    <!-- Admin -->
+    <section id="view-admin" class="view">
+      <h2>Admin Controls</h2>
+      <div class="admin-card">
+        <div class="row">
+          <div>
+            <strong>Maintenance Mode</strong>
+            <p>Block all commands while enabled.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="maintenance-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="admin-card">
+        <strong>Global Notification</strong>
+        <p>Send a message to all guilds.</p>
+        <input type="text" id="global-notification-input" placeholder="Message text...">
+        <button id="global-notification-btn" class="btn">Send</button>
+      </div>
+    </section>
+
+    <!-- Logs -->
+    <section id="view-logs" class="view">
+      <h2>Recent Activity</h2>
+      <button id="refresh-logs" class="btn ghost">Refresh</button>
+      <table class="log-table">
+        <thead><tr><th>Time</th><th>Method</th><th>Path</th><th>Status</th><th>Duration</th></tr></thead>
+        <tbody id="log-body"></tbody>
+      </table>
+    </section>
+  </main>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="/dashboard/app.js"></script>
+</body>
+</html>

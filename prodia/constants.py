@@ -1,0 +1,25 @@
+from enum import Enum
+
+
+class Model(Enum):
+    ELLDRETHVIVIDMIX = ("elldrethVividMix_v10Light.ckpt",)
+    DELIBERATE = ("deliberate_v2.safetensors",)
+    DREAMSHAPER_6 = ("dreamshaper_6BakedVae.safetensors",)
+    LYRIEL_V16 = ("lyriel_v16.safetensors",)
+    ANYTHING_V4 = ("anythingV4.ckpt",)
+    OPENJOURNEY = ("openjourney_v4.ckpt",)
+    REALISTICVS_V20 = ("realisticVisionV20_v20.safetensors",)
+    PORTRAIT = ("portraitplus_v1.ckpt",)
+    REV_ANIMATED = ("revAnimated_v122.safetensors",)
+    ANALOG = ("analogDiffusion_v10.ckpt",)
+    ABYSSORANGEMIX = ("abyssorangemix3AOM3_aom3a1.safetensors",)
+    DREAMLIKE_V1 = ("dreamlikeDiffusion_v10.safetensors",)
+    DREAMLIKE_V2 = ("dreamlikeDiffusion_v20.safetensors",)
+    DREAMSHAPER_5 = ("dreamshaper_5BakedVae.safetensors",)
+    MECHAMIX = ("mechamix_v10.safetensors",)
+    MEINAMIX = ("meinamix_v11.safetensors",)
+    SD_V14 = ("sdv1_4.ckpt",)
+    SD_V15 = ("v1-5-pruned-emaonly.ckpt",)
+    SBP = ("shoninsBeautifulPeople_v10.safetensors",)
+    THEALLYSMIX = ("theallysMixII_churned.safetensors",)
+    TIMELESS = ("timelessCounterfeitV10.safetensors",)
